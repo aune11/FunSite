@@ -1,0 +1,11 @@
+a { 
+	color: red;
+}
+
+div { 
+	border: 1px solid black;
+}
+
+div a { 
+	color: green; 
+}
