@@ -2,22 +2,19 @@ a {
 	color: red;
 }
 
-#bio { 
-	background-color: lightgray;
+.p-link { 
+	color: yellow;
 }
 
 .bio-box { 
 	border: 1px solid black;
 }
 
-.bio-box a { 
-	color: green; 
-}
-
 .orange { 
 	background-color: orange; 
 }
 
-.azure { 
-	background-color: azure; 
+.bio-copy a {
+	color: green;
 }
+
