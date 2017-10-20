@@ -1,17 +1,86 @@
-a { 
-	color: red;
+
+/* global styles */
+html, body { 
+	margin: 0;
+	padding: 0;
+}
+h1 { 
+	font-size: 7vw;
+	margin-top: 0;
 }
 
+
+a { 
+	color: #ff0000;
+}
+
+
+/* hero styles */
+.full-hero { 
+	background-color: #c7dbfc;
+	height: 50vh;
+}
+
+.full-hero li {
+	display: inline;
+}
+
+
+/* social stlyes */
 .p-link { 
-	color: yellow;
+	background: rgba(150, 150, 150, 0.5);
+	color: #ffcc17;
+	display: inline-block;
+	height: 35px;
+}
+
+.social-list { 
+	list-style: none;
+	padding: 0;
+	text-align: center;
+}
+
+.social-list > li { 
+	display: inline-block;
+}
+
+
+/* bio styles */
+.bio-wrapper { 
+	/* width: 500px; */
+	background-color: lightgray;
+	font-size: 24px;
+	overflow: hidden;
+}
+
+.bio-wrapper:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
 }
 
 .bio-box { 
-	border: 1px solid black;
+    border: 1px solid black;
+    box-sizing: border-box;
+    float: left;
+    font-size: 1rem;
+    padding: 2%;
+    width: 25%;
+}
+
+.bio-box h3 { 
+	font-size: 1.5em;
 }
 
 .orange { 
 	background-color: orange; 
+}
+
+.bio-copy {
+	font-size: 1em;
 }
 
 .bio-copy a {
