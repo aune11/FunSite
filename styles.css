@@ -2,10 +2,22 @@ a {
 	color: red;
 }
 
-div { 
+#bio { 
+	background-color: lightgray;
+}
+
+.bio-box { 
 	border: 1px solid black;
 }
 
-div a { 
+.bio-box a { 
 	color: green; 
+}
+
+.orange { 
+	background-color: orange; 
+}
+
+.azure { 
+	background-color: azure; 
 }
