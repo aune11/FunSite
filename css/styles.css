@@ -1,13 +1,14 @@
-/* globals */
 
-body {
-	font-family: arial, sans-serif;
+/* global styles */
+html, body { 
+	margin: 0;
+	padding: 0;
+}
+h1 { 
+	font-size: 7vw;
+	margin-top: 0;
 }
 
-h1 {
-  font-size: 7vw;
-  margin-top: 0;
-}
 
 a { 
 	color: #ff0000;
@@ -19,6 +20,11 @@ a {
 	background-color: #c7dbfc;
 	height: 25vh;
 }
+
+.full-hero li {
+	display: inline;
+}
+
 
 /* social stlyes */
 .social-link { 
