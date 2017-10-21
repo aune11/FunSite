@@ -1,17 +1,120 @@
+/* globals */
 
-/* global styles */
-html, body { 
-	margin: 0;
-	padding: 0;
-}
-h1 { 
-	font-size: 7vw;
-	margin-top: 0;
+body {
+	font-family: arial, sans-serif;
 }
 
+h1 {
+  font-size: 7vw;
+  margin-top: 0;
+}
 
 a { 
 	color: #ff0000;
+}
+
+
+/* header styles */
+.header { 
+	background-color: #12345d;
+	color: #fff;
+	position: fixed;
+	width: 100%;
+	z-index: 25;
+
+}
+
+.header-nav { 
+	float: right; 
+	padding: 5.5vh 60px 0 0;
+}
+
+.header-nav > li { /* only affects li directly in .header-nav and not subelements */
+	display: inline-block;
+	margin-left: 1em;
+}
+
+.header-nav > li ~ li { 
+	border-left: 1px solid rgba(255, 255, 255, 0.9);
+	padding-left: 1em;
+}
+
+.header-nav a { 
+	color: #fff;
+}
+
+.nav-links a {
+	font-size: 0.8rem;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.nav-links a:hover, .nav-links a:active {
+	color: #ed6e2f;
+}
+.header-logo:hover, .header-logo:active {
+  	background-color: #14442f;
+}
+
+.nav-links a:hover, .nav-links a:active {
+  	color: #ed6e2f;
+}
+.header-nav > li:first-child a {
+  	color: #ed6e2f;
+}
+.header-nav > li:first-child a:hover {
+  	color: #fff;
+}
+
+/* example to center a logo within the header */
+/*.header-logo { 
+	background-color: #000;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	/* this translates the left and top positioning to properly center the logo without 
+	additinal CSS or duct taping or needing to recalculate if the logo size changes 
+	transform: translate(-50%, -50%); 
+}*/
+.header-logo { 
+	background-color: #000;
+	box-sizing: border-box;
+	display: block;
+	height: 12vh;
+	padding-top: 10px;
+	position: relative;
+	text-align: center;
+	width: 12vh;
+}
+
+.header-logo img { 
+	width: 10vh;
+}
+
+
+/* footer styles */
+.footer { 
+	background-color: #12345d;
+	padding: 5vh 0 3vh;
+	text-align: center;
+}
+
+.footer h3 { 
+	color: #fff;
+	padding-top: 1.5em;
+}
+
+.footer a { 
+	text-decoration: none; 
+}
+
+.footer-nav li {
+	display: inline-block;
+	margin: 2em 1em 0;
+}
+.footer-nav a {
+	color: #fff;
 }
 
 
@@ -19,12 +122,8 @@ a {
 .full-hero { 
 	background-color: #c7dbfc;
 	height: 25vh;
+	position: relative;
 }
-
-.full-hero li {
-	display: inline;
-}
-
 
 /* social stlyes */
 .social-link { 
@@ -45,11 +144,19 @@ a {
 	width: 2.5em;
 }
 
+.social-link a:hover { 
+	background-color: #000;
+}
+
+
+
 .social-list { 
 	list-style: none;
 	padding: 0;
-	text-align: center;
+	text-align: center;	
 }
+
+
 
 .social-list > li { 
 	display: inline-block;
@@ -58,7 +165,7 @@ a {
 
 
 /* bio styles */
-.bio-wrapper { 
+.wrapper { 
 	/* width: 500px; */
 	background-color: lightgray;
 	font-size: 24px;
@@ -67,7 +174,7 @@ a {
 	overflow: hidden;
 }
 
-.bio-wrapper:after {
+.wrapper:after {
 	visibility: hidden;
 	display: block;
 	font-size: 0;
@@ -76,7 +183,7 @@ a {
 	height: 0;
 }
 
-.bio-box { 
+.box { 
     border: 1px solid black;
     box-sizing: border-box;
     float: left;
@@ -86,7 +193,7 @@ a {
     width: 23%; /* shrunk from 25% to account for the margin (-1% on each side)*/
 }
 
-.bio-box h3 { 
+.box h3 { 
 	color: #fff;
 	font-size: 1.5em;
 	margin: -40px 0 1em;
@@ -97,12 +204,12 @@ a {
 	background-color: orange; 
 }
 
-.bio-copy {
+.copy {
 	font-size: 1em;
 	line-height: 1.5em;
 }
 
-.bio-copy a {
+.copy a {
 	color: green;
 	padding: 20px;
 }
