@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+		<head>
+		<title>Page for Fun</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="/css/styles.css" />
+	</head>
+
+	<body>
+		<header class="header">
+	<nav>
+		<ul class="header-nav nav-links">
+						<li><a href="/">Home</a></li>
+			<li><a href="/gallery">Gallery</a></li>
+			<li><a href="/blog">Blog</a></li>
+			<li><a href="/2017/10/24/second-post.html">Nav</a></li>
+		</ul>
+	</nav>
+	<!-- Logo placed here to not have the nav bar shoved below it after floating -->
+	<a href="/" class="header-logo">
+		<img src="/images/logo.jpg" alt="logo" />
+	</a>
+</header>
+
+		<!--// For creating the flexbox (see body {} styling) -->
+		<div class="content-container">
+			<div class="gallery col-three">
+	
+	<!--// Image thumbnails -->
+	<div class="col col-nav gallery-thumbs" id="gallery-thumbs">
+		<div class="current">
+			<img src="/images/small/gallery-eclipse.jpg" alt="Image title 1" />
+		</div>
+
+		<div>
+			<img src="/images/small/gallery-eclipse.jpg" alt="Image title 2" />
+		</div>
+	</div>
+
+	<!--// Full sized images -->
+	<div class="col col-content">
+		<div class="gallery-photo" id="gallery-photo">
+			<img src="/images/large/gallery-eclipse.jpg" alt="Eclipse" />
+		</div>
+	</div>
+
+	<!--// Image descs -->
+	<div class="col col-aside gallery-info" id="gallery-info">
+		<h3>Eclipse</h3>
+		<p>Description here</p>
+	</div>
+</div>
+		</div>
+	
+		<footer class="footer">
+	<nav>
+		<ul class="footer-nav nav-links">
+						<li><a href="/">Home</a></li>
+			<li><a href="/gallery">Gallery</a></li>
+			<li><a href="/blog">Blog</a></li>
+			<li><a href="/2017/10/24/second-post.html">Nav</a></li>
+		</ul>
+	</nav>
+	<a class="footer-logo" href="/"><h3>Justin Aune 2017</h3></a>
+</footer>
+	</body>
+</html>
