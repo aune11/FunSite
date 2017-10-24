@@ -44,6 +44,9 @@ p {
 }
 
 
+
+/* REGULAR STYLES */
+
 /* header styles */
 .header { 
 	background-color: #12345d;
@@ -573,4 +576,99 @@ p {
 	font-size: 0.7em; 
 	margin-top: 2.5em; 
 	padding-top: 2em; 
+}
+
+
+
+/* MEDIA QUERIES/SCREEN SIZE STYLES */
+@media (max-width: 800px) { 
+	html { 
+		padding: 0;
+	}
+
+	/* media header styles */
+	.header-nav { 
+		padding: 2vh 1em 0 0;
+	}
+
+	.header-nav > li { /* reminder: this grabs only the first li in the nav list */
+		margin-left: .2em;
+	}
+
+	.header-nav > li ~ li { 
+		padding-left: .2em; 
+	}
+
+	.nav-links a { 
+		font-size: 3.3vh;
+	}
+
+	.header-logo { 
+		left: auto; 
+	}
+
+
+	/* media home styles */
+	.home-callout { 
+		flex-direction: column;
+	}
+
+	.callout-copy { 
+		flex: 1; 
+	}
+
+	.box { 
+		float: none; 
+		font-size: 1.2rem; 
+		width: auto; 
+	}
+
+	
+	/* media blog styles */
+	.post-aside { 
+		display: none; 
+	}
+
+	.blog-recent { 
+		display: none; 
+	}
+
+	.blog-previews { 
+		padding: 0;
+	}
+
+
+	/* media gallery styles */
+	.gallery { 
+		flex-direction: column; /* change flex direction */
+	}
+
+	.gallery .col { 
+		padding: 1em; /* reduce amount of padding */
+	}
+
+	.gallery .gallery-thumbs { 
+		flex: 1; 
+		height: auto; 
+		white-space: nowrap; /* forces elements to stay on one line and not wrap to a new one when hitting the edge of the container */
+		width: 100vw; /* horizontally scroll if many images */
+	}
+
+	.gallery-thumbs > div { /* expand to fill space */
+		display: inline-block;
+	}
+
+	.gallery-thumbs img { 
+		height: 7vh; 
+		margin: 0 10px 0 0; 
+		width: auto; 
+	}
+
+	.gallery .gallery-info { /* expand to fill space */
+		flex: 1; 
+	}
+
+	.gallery-photo img { 
+		width: 85vw; /* figure out where the missing 15vw is */
+	}
 }
