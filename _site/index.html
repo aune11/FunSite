@@ -3,16 +3,16 @@
 		<head>
 		<title>Page for Fun</title>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="css/reset.css" />
-		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<link rel="stylesheet" type="text/css" href="/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="/css/styles.css" />
 	</head>
 
 	<body>
 		<header class="header">
 	<nav>
 		<ul class="header-nav nav-links">
-						<li><a href="#">Nav</a></li>
-			<li><a href="#">Nav</a></li>
+						<li><a href="#">Home</a></li>
+			<li><a href="#">Gallery</a></li>
 			<li><a href="#">Nav</a></li>
 			<li><a href="#">Nav</a></li>
 		</ul>
@@ -23,7 +23,12 @@
 	</a>
 </header>
 
-		<div class="full-hero hero-home">
+		<!--// For creating the flexbox (see body {} styling) -->
+		<div class="content-container">
+			<!--// .home added to prevent the .content-container flexbox from applying to everything -->
+<div class="home">
+	<div class="full-hero hero-home">
+		<div class="hero-content">
 			<h1>Just a Page for Fun</h1>
 			<ul class="social-list">
 				<li><a class="social-link" href="#">Fb</a></li>
@@ -32,8 +37,31 @@
 				<li><a class="social-link" href="#">GH</a></li>
 			</ul>
 		</div>
+		<!--// see .full-hero:after for the little arrow ﹀ placement -->
+	</div>
 
-		<h3>Stuff Goes Here</h3>
+	<div class="home-callout">
+		<h1 class="callout-title">Stuff Goes Here</h1>
+
+		<div class="callout-copy">
+			<h4>This is the top of the Callout Copy Area</h4>
+			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</div>
+	</div>
+
+	<br />
+	<br />
+
+	<div class="home-section">
+		<h4>This Is the Top of the Home Section</h4>
+
+		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
 		<div class="wrapper">
 			<div class="box">
@@ -60,22 +88,22 @@
 				</div>
 			</div>
 
-			<div class="box">
-				<a href="#">Link</a>
-				<div class="copy">
-					<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  <a href="#">This link here just to put a link in the paragraph.</a></p>
-				</div>
-			</div>
+		</div>
+	</div>
+
+
+	<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+
 
 		</div>
-
-		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 	
 		<footer class="footer">
 	<nav>
 		<ul class="footer-nav nav-links">
-						<li><a href="#">Nav</a></li>
-			<li><a href="#">Nav</a></li>
+						<li><a href="#">Home</a></li>
+			<li><a href="#">Gallery</a></li>
 			<li><a href="#">Nav</a></li>
 			<li><a href="#">Nav</a></li>
 		</ul>

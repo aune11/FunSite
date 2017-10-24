@@ -5,53 +5,10 @@
 	<body>
 		{% include header.html %}
 
-		<div class="full-hero hero-home">
-			<h1>Just a Page for Fun</h1>
-			<ul class="social-list">
-				<li><a class="social-link" href="#">Fb</a></li>
-				<li><a class="social-link" href="#">Tw</a></li>
-				<li><a class="social-link" href="#">YT</a></li>
-				<li><a class="social-link" href="#">GH</a></li>
-			</ul>
+		<!--// For creating the flexbox (see body {} styling) -->
+		<div class="content-container">
+			{{ content }}
 		</div>
-
-		<h3>Stuff Goes Here</h3>
-
-		<div class="wrapper">
-			<div class="box">
-				<a href="#">Link</a>
-
-				<div class="copy">
-					<p>This is me.  Just a guy figuring stuff out.</p>
-
-					<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				</div>
-			</div>
-
-			<div class="box orange">
-				<a href="#">Link</a>
-				<div class="copy">
-					<p>Continuing to learn and apply what I know.  <a href="#">This link here just to put a link in the paragraph.</a></p>
-				</div>
-			</div>
-
-			<div class="box">
-				<a href="#">Link</a>
-				<div class="copy">
-					<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  <a href="#">This link here just to put a link in the paragraph.</a></p>
-				</div>
-			</div>
-
-			<div class="box">
-				<a href="#">Link</a>
-				<div class="copy">
-					<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  <a href="#">This link here just to put a link in the paragraph.</a></p>
-				</div>
-			</div>
-
-		</div>
-
-		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 	
 		{% include footer.html %}
 	</body>

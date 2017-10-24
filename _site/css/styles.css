@@ -1,7 +1,25 @@
 /* globals */
 
 body {
+	/* Flexbox declarations; display, flex-direction, min-height */
+	display: flex;
+	flex-direction: column; 
+	min-height: 100vh;
 	font-family: arial, sans-serif;
+
+}
+/*
+	For flex- content, ordering is like so:
+	flex-grow, flex-shrink, flex-basis
+	so
+	flex: 1 1 0
+*/
+.content-container { 
+	/*flex-grow: 1;*/
+	display: flex; /* apply flex rules to all containers within */
+	flex: 1 1 auto;
+	padding-top: 12vh; 
+	width: 100%;
 }
 
 h1 {
@@ -9,8 +27,17 @@ h1 {
   margin-top: 0;
 }
 
+h4 { 
+	font-size: 2em;
+}
+
 a { 
 	color: #ff0000;
+}
+
+p { 
+	line-height: 1.5;
+	margin: 0.75em 0;
 }
 
 
@@ -20,8 +47,7 @@ a {
 	color: #fff;
 	position: fixed;
 	width: 100%;
-	z-index: 25;
-
+	z-index: 20;
 }
 
 .header-nav { 
@@ -121,9 +147,55 @@ a {
 /* hero styles */
 .full-hero { 
 	background-color: #c7dbfc;
-	height: 25vh;
-	position: relative;
+	background-size: cover; /* changes a background image so it fits within its container regardless of size */
+	box-sizing: border-box;
+	height: 88vh; /*size is the screen height */
+	/* IMPORTANT: this padding-top style pushes the page content down so the header area isn't covering the top of 
+	the container, since the z index of the header is set so high */
+	padding-top: 12vh; 
+	/* background-repeat: no-repeat; */
 }
+
+.full-hero:after { 
+	bottom: 2vh; /* two vh up from the bottom */
+	color: #ed6e2f;
+	content: "﹀";
+	font-size: 36px;
+	left: 50%; /* centers it in element */
+	position: absolute; /* forces the arrow to bottom of element (with 2vh away from it); relative here won't force it down and will screw with styling if used and vh manipulated to make it work */
+	transform: translate(-50%, 0);
+}
+
+.hero-home { 
+	background-image: url(/images/eclipse.jpg); /* see background-size above for how this image is sized */
+	background-position: center top; /* changes the anchor point where browser resizes image */
+}
+
+.hero-content { 
+	color: #fff;
+	position: relative; /* relative to container it's in */
+	text-align: center; 
+	text-transform: uppercase;
+	top: 50%; /* pushes container 50% down in parent container */
+	transform: translate(0, -50%);
+}
+
+.hero-content h1 { 
+	color: #ed6e2f;
+	font-size: 7vh;
+	margin-bottom: 0.25em;
+}
+
+.hero-content .social-link { 
+	background-color: rgba(255, 255, 255, 0.8); 
+	color: #557c83;
+}
+
+.hero-content .social-link:hover { 
+	background-color: #000;
+	color: #fff;
+}
+
 
 /* social stlyes */
 .social-link { 
@@ -148,19 +220,59 @@ a {
 	background-color: #000;
 }
 
-
-
 .social-list { 
 	list-style: none;
 	padding: 0;
 	text-align: center;	
 }
 
-
-
 .social-list > li { 
 	display: inline-block;
 	margin: 0 0.5em; 
+}
+
+
+/* homepage styles */
+.home-selction { 
+	margin: 5rem auto;
+	max-width: 960px;
+	/*width: 90vw;*/
+}
+
+.home-section h4 { 
+	margin-bottom: 1.5rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.home-section > p { 
+	margin: 1vh auto;
+	width: 60vw;
+}
+
+.home-callout { 
+	display: flex; /* added to size and distribute containters evenly; should put the title on the left and corresponding text on the right */
+	align-items: center; /* different sized containers within are centered within the parent div on a horizontal axis */
+	background-color: #000;
+  	color: #fff;
+  	padding: 7vh 0;
+}
+
+.callout-title { 
+	/* flex-grow: 1;
+	flex-basis: 0; */
+	flex: 1; /* this automatically sets flex-grow and -shrink to 1, and sets flex-basis to 0 */
+	font-size: 5.5vw;
+	text-align: right; 
+	text-transform: uppercase; 
+}
+
+.callout-copy { 
+	/*flex-shrink: 0;
+	flex-basis: 45em;*/
+	flex: 0 0 45em;
+	padding: 0 3vh;
+	font-size: 0.8rem;
 }
 
 
@@ -184,13 +296,13 @@ a {
 }
 
 .box { 
-    border: 1px solid black;
+    /* border: 1px solid black; */
     box-sizing: border-box;
     float: left;
     font-size: 1rem;
-    margin: 40px 1% 0;
-    padding: 0 2% 2%;
-    width: 23%; /* shrunk from 25% to account for the margin (-1% on each side)*/
+    margin: 6rem 0;
+    padding: 0 3%;
+    width: 33%; /* shrunk from 25% to account for the margin (-1% on each side)*/
 }
 
 .box h3 { 
@@ -198,6 +310,7 @@ a {
 	font-size: 1.5em;
 	margin: -40px 0 1em;
 	text-align: center;
+	text-transform: uppercase;
 }
 
 .orange { 
@@ -206,11 +319,89 @@ a {
 
 .copy {
 	font-size: 1em;
-	line-height: 1.5em;
+	/* line-height: 1.5em; */
 }
 
 .copy a {
 	color: green;
 	padding: 20px;
+}
+
+
+/* gallery column styles */
+.col-three { 
+	display: flex; /*initialize flex for the entire container, and so the col-s can actually flex around */
+	/* allows growing prooprtional to window size, so columns always reach to the bottom of 
+	the screen even with no content present
+	--> note that .content-container MUST be set to display: flex for this to work */
+	flex: 1; 
+}
+
+.col { 
+	box-sizing: border-box;
+	padding: 2em;
+}
+
+.col-three .col ~ .col { 
+	border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.col-three .col-nav { 
+	/* sets column to shrink but not grow and min width of 15 em */
+	flex: 0 1 15em;
+}
+
+.col-three .col-content { 
+	/* sets column to shrink and grow depending on window width, in as little space as possible */
+	flex: 1 1 0;
+}
+
+.col-three .col-aside { 
+	/* allows column to shrink but not grow with flex basis of 20 em */
+	flex: 0 1 20em;
+}
+
+.gallery-thumbs { 
+	height: 88vh;
+	overflow: scroll;
+}
+
+.gallery-thumbs > div { 
+	cursor: pointer;
+}
+
+.gallery-thumbs img { 
+	box-sizing: border-box; 
+	box-shadow: 0 0 0 5px transparent;
+	display: inline-block;
+	margin: 0 0 10px;
+	opacity: 0.5;
+	transition: all 0.5s ease-in-out; /* gradual opacity change */
+	width: 100%;
+}
+
+.gallery-thumbs img:hover { 
+	opacity: 1;
+}
+
+.gallery-thumbs .current img { 
+	box-shadow: 0 0 0 5px #ed6e2f;
+	opacity: 1;
+}
+
+.gallery-photo { 
+	position: relative; 
+	text-align: center;
+}
+
+..gallery-photo img { 
+	width: 100%; 
+}
+
+.gallery-info {
+  	font-size: 0.8rem;
+}
+.gallery-info h3 {
+  	margin-bottom: 1em;
 }
 
