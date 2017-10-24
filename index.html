@@ -1,5 +1,7 @@
 ---
 layout: default
+title: "Home For Fun"
+description: "The homepage for a dummy website and blog"
 ---
 
 <!--// .home added to prevent the .content-container flexbox from applying to everything -->
@@ -8,10 +10,10 @@ layout: default
 		<div class="hero-content">
 			<h1>Just a Page for Fun</h1>
 			<ul class="social-list">
-				<li><a class="social-link" href="#">Fb</a></li>
-				<li><a class="social-link" href="#">Tw</a></li>
-				<li><a class="social-link" href="#">YT</a></li>
-				<li><a class="social-link" href="#">GH</a></li>
+				<li><a class="social-link" href="#"><i class="fa fa-facebook"></i></a></li>
+				<li><a class="social-link" href="#"><i class="fa fa-twitter"></i></a></li>
+				<li><a class="social-link" href="#"><i class="fa fa-youtube"></i></a></li>
+				<li><a class="social-link" href="#"><i class="fa fa-github"></i></a></li>
 			</ul>
 		</div>
 		<!--// see .full-hero:after for the little arrow ﹀ placement -->
@@ -44,7 +46,7 @@ layout: default
 
 				<div class="post-byline">
 					<img src="site.posts.first.gravatar" />
-					<a href="{{ site.posts.first.authorTwitter }}" class="social-link">Tw</a>
+					<a href="{{ site.posts.first.authorTwitter }}" class="social-link"><i class="fa fa-twitter"></i></a>
 					by: {{ site.posts.first.author }}
 					<span> - {{ site.posts.first.date | date: '%d %B, %Y' }}</span>
 				</div>

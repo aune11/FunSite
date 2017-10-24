@@ -82,6 +82,14 @@ p {
 	text-transform: uppercase;
 }
 
+/*added here from media query area*/
+.nav-links a, .drop-trigger, .show-mobile-menu { 
+	font-size: 0.9rem; 
+	font-weight: bold; 
+	text-decoration: none; 
+	text-transform: uppercase; 
+}
+
 .nav-links a:hover, .nav-links a:active {
 	color: #ed6e2f;
 }
@@ -123,6 +131,110 @@ p {
 .header-logo img { 
 	width: 10vh;
 }
+
+
+/* mobile menu */
+.mobile-menu-check, .show-mobile-menu { 
+	display: none; 
+}
+
+
+/* dropdown styles */
+.dropdown { 
+	position: relative; 
+}
+
+.drop-trigger { 
+	display: inline-block; 
+	padding-right: 1.5em; 
+	position: relative; 
+}
+
+.drop-trigger:after { /* create the dropdown arrow.  see nav-links.html for clarification */
+	border: 0.3em solid;
+	border-color: #fff transparent transparent; 
+	content: "";
+	height: 0;
+	position: absolute; 
+	right: 0; 
+	top: 0.3em; 
+	width: 0;
+}
+
+.dropdown:hover .drop-menu { 
+	display: block; 
+}
+
+.dropdown:hover .drop-trigger:after { 
+	border-color: #fff transparent transparent; 
+}
+
+.drop-menu { /* adds some padding so it's not right under the drop-trigger and auto hides it */
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+	display: none; 
+	list-style: none; 
+	padding: 1em 0 0;
+	position: absolute;
+	right: 0; 
+	z-index: 10; 
+}
+
+.drop-menu:before { 
+	border: 0.5em solid; 
+	border-color: transparent transparent #fff; /* creates the up pointing arrow */
+	content: "";
+	height: 0;
+	position: absolute;
+	right: 1em; 
+	top: -0.2em; 
+	width: 0;
+}
+
+.drop-menu li { 
+	background-color: #777;
+}
+
+.drop-menu li ~ li { 
+	border-top: 1px dotted rgba(0, 0, 0, 0.3);
+}
+
+.drop-menu li:first-child { /* rounds the top of the dropdown */
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+	font-size: 0.8em; 
+	padding: 1em 1em 0.25em;
+	text-align: right; 
+	text-transform: uppercase;
+}
+
+.drop-menu li:last-child { /* rounds the bottom of the dropdown */
+	border-radius: 0 0 5px 5px; 
+}
+
+.drop-menu a { 
+	color: #fff; 
+	display: block;
+	font-weight: normal; 
+	padding: 0.5em 3em 0.5em 1em;
+	text-align: left; 
+	text-transform: none; 
+	white-space: nowrap;
+}
+
+.drop-menu a:hover { 
+	background-color: rgba(0, 0, 0, 0.9); 
+	color: #fff;
+}
+
+	/*hides dropdwon from the footer */
+.footer .dropdown:hover .drop-menu, .footer .drop-trigger:after { 
+	display: none; 
+}
+
+.footer .drop-trigger { 
+	padding-right: 0; 
+}
+
 
 
 /* footer styles */
@@ -214,18 +326,18 @@ p {
 	background: rgba(150, 150, 150, 0.5);
 	border-radius: 99px; /* set in conjunction with .social-list > li to round containers */
 	box-sizing: border-box;
-	color: #ffcc17;
+	color: #fff;
 	display: inline-block;
 	font-family: arial, sans-serif;
-	font-size: 1rem;
+	font-size: 1.7rem; /* part of resizing the icon */
 	font-weight: bold;
-	height: 2.5em;
+	height: 1.5em; /* part of resizing the icon */
 	line-height: 1;
-	padding-top: 0.85em;
+	padding-top: 0.25em; /*part of resizing the icon */
 	text-align: center;
 	text-decoration: none;
 	vertical-align: middle;
-	width: 2.5em;
+	width: 1.5em; /*part of resizing the icon */
 }
 
 .social-link a:hover { 
@@ -607,7 +719,88 @@ p {
 		left: auto; 
 	}
 
+	.header-nav a, .drop-trigger { 
+		color: #fff; 
+	}
 
+	/*.nav-links a, .drop-trigger, .show-mobile-menu { 
+		font-size: 0.9rem; 
+		font-weight: bold; 
+		text-decoration: none; 
+		text-transform: uppercase; 
+	}*/
+	
+
+	/* media mobile menu styles */
+	
+	.show-mobile-menu { /* undoes the hide display up top */
+		display: block; 
+		float: right; 
+		font-weight: bold;
+		margin-top: 1.3vh; 
+		padding: 1.3em; 
+		position: relative; 
+		/*text-transform: uppercase; */
+	}
+	
+	.header-nav { /* hides the header-nav styles by reducing its height to 0 */
+		background-color: #555;
+		box-sizing: border-box;
+		left: 0;
+		max-height: 0;
+		overflow: hidden; 
+		padding: 0;
+		position: absolute;
+		text-align: center;
+		top: 12vh; /* header height */
+		transition: all 0.5s ease-in-out;
+		width: 100vw; 
+		z-index: 10; 
+	}
+
+	.header-nav li { 
+		display: block; 
+		margin-top: 1em; 
+	}
+
+	.header-nav li ~li { 
+		border: 0; 
+		padding: 0; 
+	}
+
+	.header-nav li:last-child { 
+		margin-bottom: 1em; 
+	}
+
+	.header-nav li:first-child a { 
+		color: #fff; 
+	}
+
+	/*hides dropdown in nav menu */
+	.header-nav .dropdown:hover .drop-menu, .header-nav .drop-trigger:after { 
+		display: none; 
+	}
+
+	.header-nav .drop-trigger { 
+		padding-right: 0;
+	}
+
+	.mobile-menu-check:checked ~ .header-nav { /* displays and lets the nav links element expand to as tall as the content inside it */
+		max-height: 1000px; 
+	}
+
+	.mobile-menu-check:checked ~ .show-mobile-menu:after { /*styles the dropdown to be a full width menu with centered text and overlays MENU with CLOSE */
+		background-color: #12345d;
+		color: #fff; 
+		content: "CLOSE";
+		left: 0;
+		position: absolute;
+		top: 1.3em; /* matches the top of MENU */
+		width: 100%;
+		text-align: center;
+	
+
+	
 	/* media home styles */
 	.home-callout { 
 		flex-direction: column;
