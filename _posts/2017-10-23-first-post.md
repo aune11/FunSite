@@ -1,6 +1,7 @@
 ---
 layout: post
 title: This Is the First Post
+description: In which a first post is created for a dummy blog site
 postHero: /images/eclipse.jpg
 author: Jason Kane
 authorTwitter: 

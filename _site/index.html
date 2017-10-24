@@ -1,8 +1,17 @@
 <!doctype html>
 <html>
 		<head>
-		<title>Page for Fun</title>
+		
+			<title>Home For Fun</title>
+		
+
+		
+			<meta name="description" content="The homepage for a dummy website and blog" />
+		
+
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.css" />
 		<link rel="stylesheet" type="text/css" href="/css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="/css/styles.css" />
 	</head>
@@ -10,11 +19,25 @@
 	<body>
 		<header class="header">
 	<nav>
+		<input type="checkbox" id="mobile-menu" class="mobile-menu-check" />
+		<label for="mobile-menu" class="show-mobile-menu">Menu</label>
 		<ul class="header-nav nav-links">
 						<li><a href="/">Home</a></li>
 			<li><a href="/gallery">Gallery</a></li>
-			<li><a href="/blog">Blog</a></li>
-			<li><a href="/2017/10/24/second-post.html">Nav</a></li>
+			<li class="dropdown">
+				<a class="drop-trigger" href="/blog">Blog</a>
+
+				<ul class="drop-menu">
+					<li>Recent Posts</li>
+
+					
+						<li><a href="/2017/10/24/second-post.html">This Is the Second Post</a></li>
+					
+						<li><a href="/2017/10/23/first-post.html">This Is the First Post</a></li>
+					
+				</ul>
+			</li>
+			<li><a href="/2017/10/24/second-post.html">Newest Post</a></li>
 		</ul>
 	</nav>
 	<!-- Logo placed here to not have the nav bar shoved below it after floating -->
@@ -31,10 +54,10 @@
 		<div class="hero-content">
 			<h1>Just a Page for Fun</h1>
 			<ul class="social-list">
-				<li><a class="social-link" href="#">Fb</a></li>
-				<li><a class="social-link" href="#">Tw</a></li>
-				<li><a class="social-link" href="#">YT</a></li>
-				<li><a class="social-link" href="#">GH</a></li>
+				<li><a class="social-link" href="#"><i class="fa fa-facebook"></i></a></li>
+				<li><a class="social-link" href="#"><i class="fa fa-twitter"></i></a></li>
+				<li><a class="social-link" href="#"><i class="fa fa-youtube"></i></a></li>
+				<li><a class="social-link" href="#"><i class="fa fa-github"></i></a></li>
 			</ul>
 		</div>
 		<!--// see .full-hero:after for the little arrow ﹀ placement -->
@@ -62,19 +85,19 @@
 		<div class="blog-posts">
 			<header class="post-header">
 				<h2>
-					<a href="/2017/10/24/second-post.html">This Is the First Post</a>
+					<a href="/2017/10/24/second-post.html">This Is the Second Post</a>
 				</h2>
 
 				<div class="post-byline">
 					<img src="site.posts.first.gravatar" />
-					<a href="" class="social-link">Tw</a>
+					<a href="" class="social-link"><i class="fa fa-twitter"></i></a>
 					by: Jason Kane
 					<span> - 24 October, 2017</span>
 				</div>
 			</header>
 
 			<div class="posts-image" style="background-image:url(images/eclipse.jpg);"></div>
-			<p>This is a first post.  Lorem ipsum, fool.</p>
+			<p>The second post for dummy stubbing purposes.</p>
 
 
 
@@ -130,8 +153,20 @@
 		<ul class="footer-nav nav-links">
 						<li><a href="/">Home</a></li>
 			<li><a href="/gallery">Gallery</a></li>
-			<li><a href="/blog">Blog</a></li>
-			<li><a href="/2017/10/24/second-post.html">Nav</a></li>
+			<li class="dropdown">
+				<a class="drop-trigger" href="/blog">Blog</a>
+
+				<ul class="drop-menu">
+					<li>Recent Posts</li>
+
+					
+						<li><a href="/2017/10/24/second-post.html">This Is the Second Post</a></li>
+					
+						<li><a href="/2017/10/23/first-post.html">This Is the First Post</a></li>
+					
+				</ul>
+			</li>
+			<li><a href="/2017/10/24/second-post.html">Newest Post</a></li>
 		</ul>
 	</nav>
 	<a class="footer-logo" href="/"><h3>Justin Aune 2017</h3></a>

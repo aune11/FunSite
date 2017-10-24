@@ -1,8 +1,17 @@
 <!doctype html>
 <html>
 		<head>
-		<title>Page for Fun</title>
+		
+			<title>This Is the First Post</title>
+		
+
+		
+			<meta name="description" content="In which a first post is created for a dummy blog site" />
+		
+
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.css" />
 		<link rel="stylesheet" type="text/css" href="/css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="/css/styles.css" />
 	</head>
@@ -10,11 +19,25 @@
 	<body>
 		<header class="header">
 	<nav>
+		<input type="checkbox" id="mobile-menu" class="mobile-menu-check" />
+		<label for="mobile-menu" class="show-mobile-menu">Menu</label>
 		<ul class="header-nav nav-links">
 						<li><a href="/">Home</a></li>
 			<li><a href="/gallery">Gallery</a></li>
-			<li><a href="/blog">Blog</a></li>
-			<li><a href="/2017/10/24/second-post.html">Nav</a></li>
+			<li class="dropdown">
+				<a class="drop-trigger" href="/blog">Blog</a>
+
+				<ul class="drop-menu">
+					<li>Recent Posts</li>
+
+					
+						<li><a href="/2017/10/24/second-post.html">This Is the Second Post</a></li>
+					
+						<li><a href="/2017/10/23/first-post.html">This Is the First Post</a></li>
+					
+				</ul>
+			</li>
+			<li><a href="/2017/10/24/second-post.html">Newest Post</a></li>
 		</ul>
 	</nav>
 	<!-- Logo placed here to not have the nav bar shoved below it after floating -->
@@ -34,7 +57,7 @@
 
 			<div class="post-byline">
 				<img src="" />
-				<a href="" class="social-link">Tw</a>
+				<a href="" class="social-link"><i class="fa fa-twitter"></i></a>
 				by: Jason Kane
 				<span> - 23 October, 2017</span>
 			</div>
@@ -45,7 +68,7 @@
 			<ul class="blog-title-list">
 	
         <li> 
-            <a href="/2017/10/24/second-post.html">This Is the First Post</a> <span>Posted: 24 October, 2017</span>
+            <a href="/2017/10/24/second-post.html">This Is the Second Post</a> <span>Posted: 24 October, 2017</span>
         </li>
     
         <li> 
@@ -81,8 +104,20 @@
 		<ul class="footer-nav nav-links">
 						<li><a href="/">Home</a></li>
 			<li><a href="/gallery">Gallery</a></li>
-			<li><a href="/blog">Blog</a></li>
-			<li><a href="/2017/10/24/second-post.html">Nav</a></li>
+			<li class="dropdown">
+				<a class="drop-trigger" href="/blog">Blog</a>
+
+				<ul class="drop-menu">
+					<li>Recent Posts</li>
+
+					
+						<li><a href="/2017/10/24/second-post.html">This Is the Second Post</a></li>
+					
+						<li><a href="/2017/10/23/first-post.html">This Is the First Post</a></li>
+					
+				</ul>
+			</li>
+			<li><a href="/2017/10/24/second-post.html">Newest Post</a></li>
 		</ul>
 	</nav>
 	<a class="footer-logo" href="/"><h3>Justin Aune 2017</h3></a>
